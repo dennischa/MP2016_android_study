@@ -34,20 +34,17 @@ public class MyLocation extends Service implements LocationListener {
 
     // 최소 GPS 정보 업데이트 거리 10미터
     private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10;
-
     // 최소 GPS 정보 업데이트 시간 밀리세컨이므로 1분
     private static final long MIN_TIME_BW_UPDATES = 1000 * 60 * 1;
-
     protected LocationManager locationManager;
-
     public MyLocation(Context context) {
         this.mContext = context;
         getLocation();
     }
-
     public Location getLocation() {
         if (location != null) {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_TIME_BW_UPDATES, MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
         }}
         try {
@@ -112,7 +109,6 @@ public class MyLocation extends Service implements LocationListener {
         }
         return lat;
     }
-
     /**
      * 경도값 리턴
      */
@@ -122,14 +118,12 @@ public class MyLocation extends Service implements LocationListener {
         }
         return lon;
     }
-
     /**
      * GPS 나 wife 정보가 켜져있는지 확인
      */
     public boolean isGetLocation() {
         return this.isGetLocation;
     }
-
     /**
      * GPS 정보를 가져오지 못했을때
      * 설정값으로 갈지 물어보는 alert 창

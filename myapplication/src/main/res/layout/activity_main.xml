@@ -1,49 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.myapplication.MainActivity">
-
     <TextView
         android:text="TextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:id="@+id/textView" />
 
     <Button
-        android:text="update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="141dp"
-        android:id="@+id/updateButton" />
-
-    <ListView
+        android:text="clear DB"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/updateButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="33dp"
-        android:id="@+id/list"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/clearButton" />
+
+    <Button
+        android:text="MapLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linkButton" />
+
+    <Button
+        android:text="update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/updateButton"
+      />
 
     <Button
         android:text="Listview"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_alignTop="@+id/updateButton"
-        android:layout_toRightOf="@+id/updateButton"
-        android:layout_toEndOf="@+id/updateButton"
-        android:layout_marginLeft="63dp"
-        android:layout_marginStart="63dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/getlist" />
-</RelativeLayout>
+
+    <Button
+        android:text="showmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mapbutton" />
+
+    <ListView
+        android:layout_width="1142dp"
+        android:layout_height="1075dp"
+        android:id="@+id/list"
+        android:layout_marginTop="102dp"
+        android:fastScrollEnabled="true"
+        />
+</LinearLayout>
