@@ -26,4 +26,24 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="141dp"
         android:id="@+id/updateButton" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/updateButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp"
+        android:id="@+id/list"/>
+
+    <Button
+        android:text="Listview"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignTop="@+id/updateButton"
+        android:layout_toRightOf="@+id/updateButton"
+        android:layout_toEndOf="@+id/updateButton"
+        android:layout_marginLeft="63dp"
+        android:layout_marginStart="63dp"
+        android:id="@+id/getlist" />
 </RelativeLayout>
