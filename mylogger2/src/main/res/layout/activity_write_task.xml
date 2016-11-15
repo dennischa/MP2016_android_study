@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="위치정보"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loacationINFO" />
+
+    <CheckBox
+        android:text="현재 위치 사용"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxTime"
+        android:checked="true"/>
+
+    <Button
+        android:text="수동 위치 설정"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/manualLocationButton"
+        android:onClick="onClickManualLocation"/>
+
+    <TextView
+        android:text="시간 정보"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeINFO" />
+    <CheckBox
+        android:text="현재 시간 사용"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxLocation"
+        android:checked="true"/>
+
+    <Button
+        android:text="수동 날짜 설정"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/manualDateButton"/>
+
+
+    <Button
+        android:text="수동 시간 설정"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/manualTimeButton"/>
+
+    <TextView
+        android:text="일과 정보"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/actINFO" />
+    <Button
+        android:text="일과 종류"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ActButton" />
+    <TextView
+        android:text="detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailINFO" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailInput"
+        android:text = "none"/>
+
+    <Button
+        android:text="완료"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/finishButton" />
+
+
+
+
+</LinearLayout>

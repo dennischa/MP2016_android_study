@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/MP2016_android_study.iml" filepath="$PROJECT_DIR$/MP2016_android_study.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/myapplication/myapplication.iml" filepath="$PROJECT_DIR$/myapplication/myapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mylogger2/mylogger2.iml" filepath="$PROJECT_DIR$/mylogger2/mylogger2.iml" />
       <module fileurl="file://$PROJECT_DIR$/quickcoding01/quickcoding01.iml" filepath="$PROJECT_DIR$/quickcoding01/quickcoding01.iml" />
       <module fileurl="file://$PROJECT_DIR$/quickcoding02/quickcoding02.iml" filepath="$PROJECT_DIR$/quickcoding02/quickcoding02.iml" />
     </modules>

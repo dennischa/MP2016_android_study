@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+    package="com.example.mylogger2">
     <permission
-        android:name="com.example.myapplication.locationapi.maps.permission.MAPS_RECEIVE"
+        android:name="com.example.mylogger2.locationapi.maps.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
@@ -19,16 +20,18 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MarkMap"></activity>
+        <activity android:name=".WriteTask"></activity>
+
+        <activity android:name=".GetLocation"></activity>
+
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDIGU6g1lOX41sAanq2zLohFOPJorUG3Fk"/>
+            android:value="AIzaSyA8_eS72Z7H9OmJ-0xnbnB1B1NU-Bf17IQ"/>
     </application>
 
 </manifest>

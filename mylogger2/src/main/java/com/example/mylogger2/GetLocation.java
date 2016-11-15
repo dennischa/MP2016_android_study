@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.mylogger2;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,24 +11,22 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.util.ArrayList;
+/**
+ * Created by user on 2016-11-16.
+ */
 
-
-public class MarkMap extends Activity implements OnMapReadyCallback {
+public class GetLocation extends Activity implements OnMapReadyCallback{
 
     static final LatLng SEOUL = new LatLng(37.56, 126.97);
     private GoogleMap googleMap;
-    ArrayList<Double> latList;
-    ArrayList<Double> longList;
     @Override
 
     public void onMapReady(final GoogleMap map) {
         googleMap = map;
         Intent intent = getIntent();
-        latList =  (ArrayList<Double>) getIntent().getSerializableExtra("latitude");
-        longList =  (ArrayList<Double>) getIntent().getSerializableExtra("longitude");
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom( SEOUL, 15));
+        googleMap.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
 
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) !=
                 PackageManager.PERMISSION_GRANTED
@@ -37,14 +35,6 @@ public class MarkMap extends Activity implements OnMapReadyCallback {
             return;
         }
         googleMap.setMyLocationEnabled(true);
-        for(int i=1; i<latList.size() - 1; i++) {
-            LatLng tmp = new LatLng(latList.get(i), longList.get(i));
-            map.addMarker(new MarkerOptions()
-                    .position(tmp)
-                    .title(Integer.toString(i)));
-        }
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom( SEOUL, 15));
-        googleMap.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
     }
 
     @Override
@@ -52,9 +42,11 @@ public class MarkMap extends Activity implements OnMapReadyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map);
 
-      MapFragment mapFragment = (MapFragment) getFragmentManager()
-              .findFragmentById(R.id.map);
-      mapFragment.getMapAsync(this);
+        MapFragment mapFragment = (MapFragment) getFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
+
     }
 
 
