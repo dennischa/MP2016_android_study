@@ -1,1 +1,1 @@
-include ':app', ':quickcoding01', ':quickcoding02', ':myapplication', ':mylogger2'
+include ':app', ':quickcoding01', ':quickcoding02', ':myapplication', ':mylogger2', ':achartengine-0.6.0'

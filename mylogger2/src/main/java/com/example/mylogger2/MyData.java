@@ -41,4 +41,11 @@ public class MyData {
     public double getLongitude(){
         return longitude;
     }
+
+    public String getPrint() {
+        return date + " " + time +"\n" +
+                address + "\n" +
+                "일과 종류 : " +  act + "\n detail:"
+                +  detail;
+    }
 }

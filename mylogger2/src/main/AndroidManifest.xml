@@ -28,6 +28,10 @@
 
         <activity android:name=".GetLocation"></activity>
 
+        <activity android:name=".ActList"></activity>
+        <activity android:name=".SimpleMap"></activity>
+        <activity android:name=".ShowGraph"></activity>
+
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

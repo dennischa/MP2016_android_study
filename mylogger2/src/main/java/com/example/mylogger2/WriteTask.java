@@ -38,7 +38,7 @@ public class WriteTask extends Activity {
     double longitude = 0;
     double tmp = -1;
     String actString = "none";
-    String addressString = "";
+    String addressString;
     String detailString = "none";
     String dateString= "";
     String timeString ="";
@@ -145,7 +145,9 @@ public class WriteTask extends Activity {
 
                 detailString = editText.getText().toString();
 
-                insertData("1", "2", "Test", "2" , "3",0.00, 0.00);
+                addressString = getAddress(latitude, longitude);
+                insertData(dateString, timeString, addressString, actString, detailString, latitude, longitude);
+                finish();
 
             }
 
@@ -238,8 +240,8 @@ public class WriteTask extends Activity {
 
     public String getAddress(double latitude, double longitude) {
         String str = "주소를 찾는 중 입니다.";
-        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
 
+        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
         List<Address> list;
         try {
             if (geocoder != null) {
@@ -250,7 +252,7 @@ public class WriteTask extends Activity {
                 return str;
             }
         } catch (IOException e) {
-            return str;
+            return "error";
         }
         return str;
     }

@@ -8,7 +8,6 @@
         android:layout_height="1280dp"
         android:id="@+id/list"
         android:layout_marginTop="52dp"
-        android:fastScrollEnabled="true"
-        />
+        android:fastScrollEnabled="true" />
 
 </LinearLayout>

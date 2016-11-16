@@ -32,5 +32,14 @@ public class MainActivity extends AppCompatActivity {
     public void onClickClearButton(View v){
         dataBaseOpen.onUpgrade(db,0,1);
     }
+    public void onClickWatchTask(View v){
+        Intent intent = new Intent(this, ActList.class);
+        startActivity(intent);
+    }
+
+    public void  onClickStatistics(View v){
+        Intent intent = new Intent(this, ShowGraph.class);
+        startActivity(intent);
+    }
 
 }
