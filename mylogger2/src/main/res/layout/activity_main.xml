@@ -40,6 +40,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/watchMap"
-        android:onClick="onClickWatchMap"/>
+        android:onClick="onClickWatchMap"/>.
+    <Button
+        android:text="clear DB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/clearButton"
+        android:onClick="onClickClearButton"/>
 
 </LinearLayout>

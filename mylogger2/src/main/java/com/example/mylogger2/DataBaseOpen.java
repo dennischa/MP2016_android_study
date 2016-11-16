@@ -10,19 +10,21 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DataBaseOpen extends SQLiteOpenHelper {
 
     public DataBaseOpen(Context context) {
-        super(context, "db_table", null, 1);
+        super(context, "t_table", null, 1);
     }
 
     // 최초 실행시 Data Base 한번만 생성
     @Override
+
+
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE db_table"
+        db.execSQL("CREATE TABLE t_table"
                 + "(id integer primary key autoincrement, "
                 + "date TEXT, "
                 + "time TEXT, "
                 + "address TEXT, "
                 + "act TEXT, "
-                + "detail TEXT"
+                + "detail TEXT, "
                 + "latitude REAL, "
                 + "longitude REAL);");
     }

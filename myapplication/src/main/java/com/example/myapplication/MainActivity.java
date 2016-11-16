@@ -24,6 +24,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
     static DataBaseOpen dataBaseOpen;
     static SQLiteDatabase db;
+
     ArrayList<MyData> arrayList;
     ArrayList<String> strList;
     ArrayList<Double> latList;
@@ -60,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         //db 생성
         dataBaseOpen = new DataBaseOpen(this);
         db = dataBaseOpen.getWritableDatabase();
+
+
         //textView, Button 연결
         textView = (TextView) findViewById(R.id.textView);
         location = new MyLocation(this);
@@ -163,8 +166,8 @@ public class MainActivity extends AppCompatActivity {
             return str;
         }
         return str;
-    }
 
+}
     public void insertData(String date, String time,
                            String address, double latitude, double longitude) {
         db.execSQL("INSERT INTO db_table "
