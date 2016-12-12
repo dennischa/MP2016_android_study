@@ -24,12 +24,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btnLogin2 = (Button) findViewById(R.id.button2);
-        btnLogin2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), String.valueOf(min.getValue()), Toast.LENGTH_LONG).show();
-            }
-        });
+
     }
 }
