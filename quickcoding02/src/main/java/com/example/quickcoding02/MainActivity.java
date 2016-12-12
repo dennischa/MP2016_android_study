@@ -7,11 +7,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+        // djdjlstjlsatlkjsdaktjldanstlknsothaoisdtadsthalsdhtlih
 
-    int myNumber = 333;
-    int start = 1;
-    int end = 500;
-    int count = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
